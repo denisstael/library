@@ -18,7 +18,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     if @book.save
       flash[:success] = 'Livro cadastrado com sucesso'
-      render :show
+      redirect_to book_path(@book)
     else
       render :new
     end
