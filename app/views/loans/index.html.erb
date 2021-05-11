@@ -1,0 +1,35 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h2>Empréstimos</h2>
+    </div>
+    <div class="col-sm-4 col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Número</th>
+              <th>Data de empréstimo</th>
+              <th>Data de devolução</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if @loans.empty? %>
+              <tr>
+                <td colspan="4" class="text-center">
+                  <h3>Nenhum empréstimo ativo.</h3>
+                </td>
+              </tr>
+            <% end %>
+            <% @loans.each do |loan| %>
+              <td><%= loan.id %></td>
+              <td><%= loan.loan_date %></td>
+              <td><%= loan.devolution_date %></td>
+              <td><%= link_to 'Detalhes', loan %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

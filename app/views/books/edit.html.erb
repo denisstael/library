@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <%= form_for @book do |f| %>
+    <%= render "layouts/errors_messages", object: f.object %>
+    <h2>Editar Livro</h2>
+    <%= render "form", f: f %>
+    <%= f.submit "Salvar", class: "btn btn-primary" %>
+  <% end %>
+</div>

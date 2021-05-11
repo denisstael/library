@@ -1,0 +1,15 @@
+pt-BR:
+  activerecord:
+    models:
+      book: Livro
+    attributes:
+      book:
+        name: Nome
+        author: Autor
+        publishing_company: Editora
+        edition: Edição
+        description: Descrição
+        pages_number: Número de Páginas
+        edition_year: Ano
+        exemplary: Exemplar
+        isbn: ISBN

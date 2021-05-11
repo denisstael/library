@@ -1,0 +1,37 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+select {
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #555555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+img {
+  max-width: 600px;
+  max-height: 400px;
+}
+
+textarea.form-control {
+  height: 200px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+table {
+  text-align: center;
+}
+
+th {
+  text-align: center;
+}
+

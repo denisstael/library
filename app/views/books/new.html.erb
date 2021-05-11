@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <%= form_for @book do |f| %>
+    <%= render "layouts/errors_messages", object: f.object %>
+    <h2>Cadastrar Livro</h2>
+    <%= render "form", f: f %>
+    <%= f.submit "Cadastrar", class: "btn btn-primary" %>
+  <% end %>
+</div>

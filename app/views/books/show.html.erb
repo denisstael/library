@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h2>Informações do livro</h2>
+    </div>
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <p>Nome: <%= @book.name %></p>
+      <p>Autor: <%= @book.author %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <%= link_to 'Editar', edit_book_path, class: "btn btn-primary btn-lg" %>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <%= button_to 'Excluir', @book, method: :delete, class: "btn btn-danger btn-lg" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

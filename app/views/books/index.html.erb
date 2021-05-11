@@ -1,0 +1,47 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h2>Livros</h2>
+    </div>
+    <div class="col-sm-4 col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Número</th>
+              <th>Nome</th>
+              <th>Autor</th>
+              <th>Editora</th>
+              <th>Edição</th>
+              <th>Ano</th>
+              <th>Exemplar</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if @books.empty? %>
+              <tr>
+                <td colspan="4" class="text-center">
+                  <h3>Nenhum livro cadastrado.</h3>
+                </td>
+              </tr>
+            <% end %>
+            <tr>
+              <% @books.each do |book| %>
+                <td><%= book.id %></td>
+                <td><%= book.name %></td>
+                <td><%= book.author %></td>
+                <td><%= book.publishing_company %></td>
+                <td><%= book.edition %></td>
+                <td><%= book.edition_year %></td>
+                <td><%= book.exemplary %></td>
+                <td><%= book.status %></td>
+                <td><%= link_to 'Detalhes', book %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

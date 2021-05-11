@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-sm-8">
+    <div>
+      <%= f.label :name %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label :author %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :author, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label :publishing_company %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :publishing_company, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label :edition %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :edition, class: "form-control" %>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div>
+      <%= f.label :pages_number %>
+    </div>
+    <div class="form-group">
+      <%= f.number_field :pages_number, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label :edition_year %>
+    </div>
+    <div class="form-group">
+      <%= f.number_field :edition_year, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label :exemplary %>
+    </div>
+    <div class="form-group">
+      <%= f.number_field :exemplary, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label :isbn %>
+    </div>
+    <div class="form-group">
+      <%= f.number_field :isbn, class: "form-control" %>
+    </div>
+  </div>
+</div>
+<div>
+  <%= f.label :description %>
+</div>
+<div class="form-group">
+  <%= f.text_area :description, class: "form-control" %>
+</div>
