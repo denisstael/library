@@ -10,7 +10,7 @@
       <%= f.label :book_id %>
     </div>
     <div class="form-group">
-      <%= f.select :book_id, options_from_collection_for_select(@books, :id, :name) %>
+      <%= f.select :book_id, options_from_collection_for_select(@books || [], :id, :name) %>
     </div>
   </div>
   <div class="col-sm-6">
@@ -24,7 +24,7 @@
       <%= f.label :reader_id %>
     </div>
     <div class="form-group">
-      <%= f.select :reader_id, options_from_collection_for_select(@readers, :id, :name) %>
+      <%= f.select :reader_id, options_from_collection_for_select(@readers || [], :id, :name) %>
     </div>
   </div>
 </div>

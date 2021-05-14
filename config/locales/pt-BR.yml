@@ -1,7 +1,18 @@
 pt-BR:
   activerecord:
     models:
-      book: Livro
+      book:
+        one: Livro
+        other: Livros
+      reader:
+        one: Leitor
+        other: Leitores
+      loan:
+        one: Empréstimo
+        other: Empréstimos
+      user:
+        one: Usuário
+        other: Usuário
     attributes:
       book:
         name: Nome
@@ -13,3 +24,18 @@ pt-BR:
         edition_year: Ano
         exemplary: Exemplar
         isbn: ISBN
+      reader:
+        name: Nome
+        phone: Telefone
+        email: Email
+        birth_date: Data de nascimento
+      loan:
+        loan_date: Data de Empréstimo
+        devolution_date: Data de Devolução
+        discharge_date: Data da Baixa
+        status: Status
+        reader_id: Leitor
+        book_id: Livro
+      user:
+        name: Nome
+        email: Email
