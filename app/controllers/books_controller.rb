@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   before_action :set_book, only: %i[show edit update destroy]
 
   def index
-    @books = Book.all
+    @books = Book.all.order(:id)
   end
 
   def new
@@ -18,16 +18,16 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     if @book.save
       flash[:success] = 'Livro cadastrado com sucesso'
-      redirect_to book_path(@book)
+      redirect_to books_path
     else
       render :new
     end
   end
 
   def update
-    if @book.update!(book_params)
+    if @book.update(book_params)
       flash[:success] = 'Livro atualizado com sucesso'
-      render :show
+      redirect_to books_path
     else
       render :edit
     end

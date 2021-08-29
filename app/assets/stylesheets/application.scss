@@ -35,3 +35,18 @@ th {
   text-align: center;
 }
 
+li {
+  font-size: 16px;
+}
+
+a.button {
+  background-color: #5096be;
+  color: #fafafa;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+a.button:hover {
+  background-color: #406c86;
+}

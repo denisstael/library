@@ -6,16 +6,23 @@
     <div class="col-md-8 col-md-offset-2 col-xs-12">
       <p>Nome: <%= @book.name %></p>
       <p>Autor: <%= @book.author %></p>
+      <p>Editora: <%= @book.publishing_company %></p>
+      <p>Edição: <%= @book.edition %></p>
+      <p>Número de Páginas: <%= @book.pages_number %></p>
+      <p>Ano: <%= @book.edition_year %></p>
+      <p>Exemplar: <%= @book.exemplary %></p>
+      <p>ISBN: <%= @book.isbn %></p>
+      <p>Descrição: <%= @book.description %></p>
     </div>
   </div>
   <div class="row">
     <div class="col-md-8 col-md-offset-2 col-xs-12">
       <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
         <div class="btn-group mr-2" role="group" aria-label="First group">
-          <%= link_to 'Editar', edit_book_path, class: "btn btn-primary btn-lg" %>
+          <%= link_to 'Editar', edit_book_path, class: "btn btn-primary" %>
         </div>
         <div class="btn-group mr-2" role="group" aria-label="First group">
-          <%= button_to 'Excluir', @book, method: :delete, class: "btn btn-danger btn-lg" %>
+          <%= button_to 'Excluir', @book, method: :delete, class: "btn btn-danger" %>
         </div>
       </div>
     </div>

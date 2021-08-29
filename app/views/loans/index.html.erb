@@ -11,6 +11,8 @@
               <th>Número</th>
               <th>Data de empréstimo</th>
               <th>Data de devolução</th>
+              <th>Livro</th>
+              <th>Leitor</th>
             </tr>
           </thead>
           <tbody>
@@ -25,7 +27,9 @@
               <td><%= loan.id %></td>
               <td><%= loan.loan_date %></td>
               <td><%= loan.devolution_date %></td>
-              <td><%= link_to 'Detalhes', loan %></td>
+              <td><%= loan.book.name %></td>
+              <td><%= loan.reader.name %></td>
+              <td><%= link_to 'Detalhes', loan, class: 'button' %></td>
             </tr>
           <% end %>
         </tbody>

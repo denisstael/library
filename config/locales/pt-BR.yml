@@ -34,8 +34,12 @@ pt-BR:
         devolution_date: Data de Devolução
         discharge_date: Data da Baixa
         status: Status
+        reader: Leitor
+        book: Livro
         reader_id: Leitor
         book_id: Livro
       user:
         name: Nome
         email: Email
+        password: Senha
+        password_confirmation: Confirmação da Senha

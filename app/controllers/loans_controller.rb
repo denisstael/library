@@ -1,6 +1,6 @@
 class LoansController < ApplicationController
   before_action :require_logged_in_user
-  before_action :set_loan, only: [:show]
+  before_action :set_loan, only: %i[show edit update destroy]
 
   def index
     @loans = Loan.all
@@ -12,6 +12,11 @@ class LoansController < ApplicationController
     @books = Book.all
   end
 
+  def edit
+    @readers = [@loan.reader]
+    @books = [@loan.book]
+  end
+
   def show
     @reader = @loan.reader
     @book = @loan.book
@@ -21,9 +26,27 @@ class LoansController < ApplicationController
     @loan = Loan.new(loan_params)
     if @loan.save
       flash[:success] = 'Empréstimo cadastrado com sucesso'
-      render :show
+      redirect_to loans_path
     else
       render :new
+    end
+  end
+
+  def update
+    if @loan.update(loan_params)
+      flash[:success] = 'Empréstimo atualizado com sucesso'
+      redirect_to loans_path
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    if @loan.delete
+      flash[:success] = 'Empréstimo deletado com sucesso'
+      redirect_to loans_path
+    else
+      render :show
     end
   end
 

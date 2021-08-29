@@ -1,11 +1,25 @@
 <div class="jumbotron">
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <h2>Detalhes do empréstimo</h2>
-        </div>
-        <div class="col-md-8 col-md-offset-2 col-xs-12">
-            <h3>Data de empréstimo: <%= @loan.loan_date %></h3>
-            <h3>Data de devolução: <%= @loan.devolution_date %></h3>
-        </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h2>Detalhes do empréstimo</h2>
     </div>
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <p>Data de empréstimo: <%= @loan.loan_date %></p>
+      <p>Data de devolução: <%= @loan.devolution_date %></p>
+			<p>Livro: <%= @loan.book.name %></p>
+      <p>Leitor: <%= @loan.reader.name %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <%= link_to 'Editar', edit_loan_path, class: "btn btn-primary" %>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <%= button_to 'Excluir', @loan, method: :delete, class: "btn btn-danger" %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

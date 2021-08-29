@@ -4,6 +4,6 @@ class Book < ApplicationRecord
   validates :name, :author, presence: true
 
   def can_delete?
-    loans.count == 0
+    loans.count.zero?
   end
 end

@@ -1,11 +1,25 @@
 <div class="jumbotron">
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <h2>Informações do Leitor</h2>
-        </div>
-        <div class="col-md-8 col-md-offset-2 col-xs-12">
-            <h3>Nome: <%= @reader.name %></h3>
-            <h3>Email: <%= @reader.email %></h3>
-        </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h2>Informações do Leitor</h2>
     </div>
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <p>Nome: <%= @reader.name %></p>
+      <p>Email: <%= @reader.email %></p>
+      <p>Telefone: <%= @reader.phone %></p>
+      <p>Data de Nascimento: <%= @reader.birth_date %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <%= link_to 'Editar', edit_reader_path, class: "btn btn-primary" %>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <%= button_to 'Excluir', @reader, method: :delete, class: "btn btn-danger" %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
